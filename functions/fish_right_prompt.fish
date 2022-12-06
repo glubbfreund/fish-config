@@ -8,7 +8,7 @@ function fish_right_prompt
             set_color normal
             echo " "
         case insert
-            set_color 282A2E -b 9ECE6A 
+            set_color black -b $fish_color_autosuggestion 
             echo " INSERT "
             set_color normal
             echo " "
