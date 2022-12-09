@@ -8,19 +8,19 @@ function fish_right_prompt
     or test "$fish_key_bindings" = "fish_hybrid_key_bindings"
     switch $fish_bind_mode
         case default
-            set_color 282A2E -b 72E6CC 
+            set_color 101010 -b 72E6CC 
             echo " NORMAL "
             set_color normal
         case insert
-            set_color black -b $fish_color_autosuggestion 
+            set_color 101010 -b $fish_color_autosuggestion 
             echo " INSERT "
             set_color normal
         case visual
-            set_color 282A2E -b 9D7CD8 
+            set_color 101010 -b 9D7CD8 
             echo " VISUAL "
             set_color normal
         case replace_one
-            set_color 282A2E -b f7768e
+            set_color 101010 -b f7768e
             echo " REPLACE "
             set_color normal
     end
