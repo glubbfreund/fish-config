@@ -1,8 +1,13 @@
 function fish_prompt
+    set -l last_status $status
     set -l cwd (prompt_pwd)
+    if not test $last_status -eq 0
+        set_color D2042D
+    else
+        set_color 72E6CC
+    end
 
     # Display current path
-    set_color 72E6CC
     set -l cwd (basename (prompt_pwd))
     echo -n "$cwd "
 
@@ -11,7 +16,7 @@ function fish_prompt
     set -l git_dirty (command git status -s --ignore-submodules=dirty 2> /dev/null)
     if test -n "$git_branch"
         if test -n "$git_dirty"
-            set_color black -b yellow
+            set_color black -b FECC27
             echo -n "  $git_branch "
         else
             set_color black -b 9ECE6A 
